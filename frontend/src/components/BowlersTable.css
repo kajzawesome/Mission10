@@ -1,0 +1,68 @@
+.table-container {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.bowlers-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bowlers-table thead {
+  background-color: #667eea;
+  color: white;
+}
+
+.bowlers-table thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #667eea;
+}
+
+.bowlers-table tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bowlers-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.bowlers-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.team-name {
+  font-weight: 500;
+  color: #667eea;
+}
+
+.loading,
+.error,
+.no-data {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.loading {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.no-data {
+  background-color: #f5f5f5;
+  color: #666;
+}

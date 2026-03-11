@@ -1,0 +1,19 @@
+.page-heading {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.page-heading h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.page-heading p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
