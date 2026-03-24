@@ -1,5 +1,4 @@
-const API_BASE_URL = 'http://localhost:5173';
-const API_ALT_URL = 'https://localhost:3000';
+const API_BASE_URL = 'http://localhost:5197';
 
 interface FetchOptions extends RequestInit {
   headers?: Record<string, string>;
@@ -10,7 +9,6 @@ export async function fetchData<T>(
   options: FetchOptions = {}
 ): Promise<T> {
   const url = `${API_BASE_URL}${endpoint}`;
-  const altUrl = `${API_ALT_URL}${endpoint}`;
   const defaultHeaders: Record<string, string> = {
     'Content-Type': 'application/json',
   };
@@ -27,12 +25,7 @@ export async function fetchData<T>(
     const response = await fetch(url, config);
 
     if (!response.ok) {
-      const altResponse = await fetch(altUrl, config);
-      if (!altResponse.ok) {
-        throw new Error(`API Error: ${response.status} ${response.statusText}`);
-      }
-      const altData = await altResponse.json();
-      return altData as T;
+      throw new Error(`API Error: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
